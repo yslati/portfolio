@@ -6,7 +6,17 @@ module.exports = {
   purge: [],
   darkMode: false, // or 'media' or 'class'
   theme: {
-    extend: {},
+    extend: {
+      colors: {
+        "my_gray": "#4d4d4d",
+      },
+      borderRadius: {
+        "4xl": "2.5rem",
+      },
+      height: {
+        "mmax": "90%",
+      },
+    },
   },
   variants: {
     extend: {},
