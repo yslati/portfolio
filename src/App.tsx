@@ -4,7 +4,7 @@ import Infos from "./Infos"
 function App() {
 
   return (
-    <div className="w-screen h-screen bg-black flex space-x-14 p-16 justify-between">
+    <div className="w-screen h-screen bg-black flex space-x-24 p-24 justify-between">
       <Infos />
       <Display />
     </div>
