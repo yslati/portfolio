@@ -2,11 +2,13 @@ import { createSlice, PayloadAction } from "@reduxjs/toolkit";
 import type { RootState } from "../../app/store";
 
 interface DisplayState {
-    value: string
+    value: string,
+    mobileClick: boolean
 }
 
 const initialState: DisplayState = {
     value: "/luffy.jpg",
+    mobileClick: false,
 }
 
 export const displaySlice = createSlice({
@@ -19,9 +21,12 @@ export const displaySlice = createSlice({
         resetDisplay: (state) => {
             state.value = "/luffy.jpg"
         },
+        switchMobile: (state, action: PayloadAction<boolean>) => {
+            state.mobileClick = action.payload; 
+        }
     },
 })
 
-export const { setDisplay, resetDisplay } = displaySlice.actions
+export const { setDisplay, resetDisplay, switchMobile } = displaySlice.actions
 export const selectDisplay = (state: RootState) => state.display.value
 export default displaySlice.reducer 
