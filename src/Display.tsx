@@ -12,7 +12,7 @@ export default function Display({image}: {image: string}) {
           repeatType: "mirror",
           duration: 0.1,
         }}
-        src={image} alt="" className="rounded-4xl object-center h-full w-full transition-all duration-500 " />
+        src={image} alt="" className="object-cover rounded-4xl h-full w-full transition-all duration-500 " />
       </div>
         <ImageAlt />
     </div>

@@ -11,12 +11,13 @@ function App() {
   const image = useAppSelector((state) => state.display.value);
   const isMobile = useAppSelector((state) => state.display.mobileClick);
 
+  
   useEffect(() => {
-    console.log(window.innerWidth)
-    if (window.innerWidth >= 1024 && isMobile) {
-      console.log("close");
-      dispatch(switchMobile(false))
-    }
+    window.addEventListener('resize',  () => {
+      if (window.innerWidth >= 1024) {
+        dispatch(switchMobile(false))
+      }
+    });
   }, [window.innerWidth])
 
   if (isMobile && window.innerWidth < 1024)
