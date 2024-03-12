@@ -1,5 +1,5 @@
 import ImageAlt from "./display/ImageAlt";
-import { AnimatePresence, motion } from "framer-motion"
+import { motion } from "framer-motion"
 
 export default function Display({image}: {image: string}) {
 

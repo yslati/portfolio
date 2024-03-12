@@ -3,7 +3,7 @@ import Display from "./Display"
 import DisplayMobile from "./DisplayMobile";
 import Infos from "./Infos"
 import { useAppDispatch, useAppSelector } from "./app/hooks"
-import { switchMobile } from "./features/display/displaySlice";
+import { resetDisplay, switchMobile } from "./features/display/displaySlice";
 
 function App() {
 
@@ -16,6 +16,7 @@ function App() {
     window.addEventListener('resize',  () => {
       if (window.innerWidth >= 1024) {
         dispatch(switchMobile(false))
+        dispatch(resetDisplay())
       }
     });
   }, [window.innerWidth])

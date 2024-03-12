@@ -12,8 +12,7 @@ export default function DisplayMobile({image}: {image: string}) {
     }
 
     return (
-        <div className="w-screen h-screen bg-gray-600 relative transition-all duration-300 flex flex-col md:p-8 p-5">
-            {/* <img src={image} alt="" className="" /> */}
+        <div style={{backgroundImage: `url(${image})`}} className="w-screen h-screen bg-no-repeat bg-cover relative transition-all duration-300 flex flex-col md:p-8 p-5">
             <XMarkIcon onClick={() => closeMobile()} className=" md:w-10 w-7 text-white ml-auto cursor-pointer" />
             <ImageAlt />
         </div>
